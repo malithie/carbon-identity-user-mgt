@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.user.mgt.service;
+package org.wso2.carbon.identity.user.mgt.store.connector;
 
-import org.wso2.carbon.security.caas.user.core.service.RealmService;
+import org.wso2.carbon.security.caas.user.core.exception.CredentialStoreException;
+import org.wso2.carbon.security.caas.user.core.store.connector.CredentialStoreConnector;
+
+import javax.security.auth.callback.Callback;
 
 /**
- * Extended Realm Service for user management.
+ * Extended Credential Store Connector which provides write capability.
  *
  * @since 1.0.0
  */
-public interface ExtendedRealmService extends RealmService {
+public interface PrivilegedCredentialStoreConnector extends CredentialStoreConnector {
 
+    void updateCredential(Callback[] callbacks) throws CredentialStoreException;
+
+    void updateCredential(String username, Callback[] credentialCallbacks) throws CredentialStoreException;
 }

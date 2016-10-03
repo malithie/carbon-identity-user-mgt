@@ -30,7 +30,7 @@ import javax.security.auth.callback.Callback;
  *
  * @since 1.0.0
  */
-public interface ExtendedIdentityStore extends IdentityStore {
+public interface PrivilegedIdentityStore extends IdentityStore {
 
     /**
      * Adds a new user to the primary identity store.

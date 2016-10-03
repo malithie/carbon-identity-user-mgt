@@ -30,7 +30,7 @@ import javax.security.auth.callback.Callback;
  *
  * @since 1.0.0
  */
-public interface ExtendedIdentityStoreConnector extends IdentityStoreConnector {
+public interface PrivilegedIdentityStoreConnector extends IdentityStoreConnector {
 
     /**
      * Adds a new user.
