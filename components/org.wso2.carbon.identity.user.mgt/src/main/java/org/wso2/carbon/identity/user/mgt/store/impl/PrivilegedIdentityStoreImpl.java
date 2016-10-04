@@ -33,14 +33,13 @@ import javax.security.auth.callback.Callback;
  */
 public class PrivilegedIdentityStoreImpl extends IdentityStoreImpl implements PrivilegedIdentityStore {
 
-
     @Override
     public User addUser(Callback[] callbacks) throws IdentityStoreException {
         return null;
     }
 
     @Override
-    public User addUser(Callback[] callbacks, String identityStoreId) throws IdentityStoreException {
+    public User addUser(Callback[] callbacks, String domain) throws IdentityStoreException {
         return null;
     }
 
@@ -50,7 +49,7 @@ public class PrivilegedIdentityStoreImpl extends IdentityStoreImpl implements Pr
     }
 
     @Override
-    public User addUser(Callback[] callbacks, Map<String, String> userAttributes, String identityStoreId) throws
+    public User addUser(Callback[] callbacks, Map<String, String> userAttributes, String domain) throws
             IdentityStoreException {
         return null;
     }
@@ -62,8 +61,8 @@ public class PrivilegedIdentityStoreImpl extends IdentityStoreImpl implements Pr
     }
 
     @Override
-    public User addUser(String username, Callback credential, Map<String, String> userAttributes, String
-            identityStoreId) throws IdentityStoreException {
+    public User addUser(String username, Callback credential, Map<String, String> userAttributes, String domain)
+            throws IdentityStoreException {
         return null;
     }
 
@@ -73,7 +72,7 @@ public class PrivilegedIdentityStoreImpl extends IdentityStoreImpl implements Pr
     }
 
     @Override
-    public Group addGroup(String groupName, List<User> users, String identityStoreId) throws IdentityStoreException {
+    public Group addGroup(String groupName, List<User> users, String domain) throws IdentityStoreException {
         return null;
     }
 
@@ -84,8 +83,8 @@ public class PrivilegedIdentityStoreImpl extends IdentityStoreImpl implements Pr
     }
 
     @Override
-    public Group addGroup(String groupName, List<User> users, Map<String, String> groupAttributes, String
-            identityStoreId) throws IdentityStoreException {
+    public Group addGroup(String groupName, List<User> users, Map<String, String> groupAttributes, String domain)
+            throws IdentityStoreException {
         return null;
     }
 
@@ -100,50 +99,49 @@ public class PrivilegedIdentityStoreImpl extends IdentityStoreImpl implements Pr
     }
 
     @Override
-    public void updateAttributesOfUser(String userId, String identityStoreId, Map<String, String> newUserAttributes)
-            throws IdentityStoreException {
+    public void updateAttributesOfUser(String userId, String domain, Map<String, String> newUserAttributes) throws
+            IdentityStoreException {
 
     }
 
     @Override
-    public void updateAttributesOfUser(String userId, String identityStoreId, Map<String, String> attributesToAssign,
+    public void updateAttributesOfUser(String userId, String domain, Map<String, String> attributesToAssign,
                                        Map<String, String> attributesToUnAssign) throws IdentityStoreException {
 
     }
 
     @Override
-    public void updateGroupsOfUser(String userId, String identityStoreId, List<Group> newGroupList) throws
+    public void updateGroupsOfUser(String userId, String domain, List<Group> newGroupList) throws
             IdentityStoreException {
 
     }
 
     @Override
-    public void updateGroupsOfUser(String userId, String identityStoreId, List<Group> groupsToAssign, List<Group>
+    public void updateGroupsOfUser(String userId, String domian, List<Group> groupsToAssign, List<Group>
             groupsToUnAssign) throws IdentityStoreException {
 
     }
 
     @Override
-    public void updateUsersOfGroup(String groupId, String identityStoreId, List<User> newUsers) throws
-            IdentityStoreException {
+    public void updateUsersOfGroup(String groupId, String domain, List<User> newUsers) throws IdentityStoreException {
 
     }
 
     @Override
-    public void updateUsersOfGroup(String groupId, String identityStoreId, List<User> usersToAssign, List<User>
+    public void updateUsersOfGroup(String groupId, String domain, List<User> usersToAssign, List<User>
             usersToUnAssign) throws IdentityStoreException {
 
     }
 
     @Override
-    public void updateAttributesOfGroup(String groupId, String identityStoreId, Map<String, String> groupAttributes)
-            throws IdentityStoreException {
+    public void updateAttributesOfGroup(String groupId, String domain, Map<String, String> groupAttributes) throws
+            IdentityStoreException {
 
     }
 
     @Override
-    public void updateAttributesOfGroup(String groupId, String identityStoreId, Map<String, String>
-            attributesToAssign, Map<String, String> attributesToUnAssign) throws IdentityStoreException {
+    public void updateAttributesOfGroup(String groupId, String domain, Map<String, String> attributesToAssign,
+                                        Map<String, String> attributesToUnAssign) throws IdentityStoreException {
 
     }
 }
