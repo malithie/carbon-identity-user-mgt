@@ -24,7 +24,7 @@ import javax.security.auth.callback.Callback;
 /**
  * Extended Credential Store.
  */
-public interface ExtendedCredentialStore extends CredentialStore {
+public interface PrivilegedCredentialStore extends CredentialStore {
 
     /**
      * Updates the credential of user.

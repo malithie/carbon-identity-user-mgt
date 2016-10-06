@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.user.mgt.inernal;
+package org.wso2.carbon.identity.user.mgt.internal;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
-import org.wso2.carbon.identity.user.mgt.common.ExtendedRealmServiceImpl;
-import org.wso2.carbon.identity.user.mgt.service.ExtendedRealmService;
+import org.wso2.carbon.identity.user.mgt.service.PrivilegedRealmService;
+import org.wso2.carbon.identity.user.mgt.service.impl.PrivilegedRealmServiceImpl;
 
 /**
  * OSGi component for user management.
@@ -34,6 +34,10 @@ public class UserManagementComponent {
     @Activate
     public void registerUserManagementService(BundleContext bundleContext) {
 
-        bundleContext.registerService(ExtendedRealmService.class, new ExtendedRealmServiceImpl(), null);
+        try {
+            bundleContext.registerService(PrivilegedRealmService.class, new PrivilegedRealmServiceImpl(null), null);
+        } catch (Throwable e) {
+
+        }
     }
 }

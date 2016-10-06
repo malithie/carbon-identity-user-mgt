@@ -14,12 +14,20 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.user.mgt.bean;
+package org.wso2.carbon.identity.user.mgt.service;
 
+import org.wso2.carbon.identity.user.mgt.store.PrivilegedCredentialStore;
+import org.wso2.carbon.identity.user.mgt.store.PrivilegedIdentityStore;
+import org.wso2.carbon.security.caas.user.core.service.RealmService;
 /**
- * Extended user
+ * Extended Realm Service for user management.
+ *
+ * @since 1.0.0
  */
-public class ExtendedUser {
+public interface PrivilegedRealmService extends RealmService {
+
+    PrivilegedCredentialStore getPrivilegedCredentialStore();
+
+    PrivilegedIdentityStore getPrivilegedIdentityStore();
 
 }
-
